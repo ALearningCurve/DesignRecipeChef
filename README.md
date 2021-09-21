@@ -1,7 +1,7 @@
 # DesignRecipeChef
 Automate Racket (BSL, etc) design recipes. This tool was especially made for enumerables (which are a pain in the butt to type out)! 
-View this site for yourself at [ALearningCurve.pythonanywhere.com](ALearningCurve.pythonanywhere.com) (If the site isn't called Design Chef,
-then pythonanywhere has changed my active site)
+View this site for yourself at [https://designchef.pythonanywhere.com/](https://designchef.pythonanywhere.com/) (If the site isn't up
+just let me know)
 
 
 # Usage
