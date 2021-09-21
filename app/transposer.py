@@ -90,9 +90,9 @@ def create_template_enum(example_names: list, datatype_name: str, arg_name: str)
     comparison_operator = "string=?"
     output = "\n"
     output += f"(define ({datatype_name.lower()}-template {arg_name})"
-    output += f"\n  (cond [({comparison_operator} {arg_name} {datatype_name.upper()}-{remove_quotes(example_names[0]).strip()}) ...]"
+    output += f"\n  (cond [({comparison_operator} {arg_name} {datatype_name.upper()}-{remove_quotes(example_names[0]).strip().upper()}) ...]"
     for i in range(1, len(example_names)):
-        output += f"\n        [({comparison_operator} {arg_name} {datatype_name.upper()}-{remove_quotes(example_names[i]).strip()}) ...]"
+        output += f"\n        [({comparison_operator} {arg_name} {datatype_name.upper()}-{remove_quotes(example_names[i]).strip().upper()}) ...]"
     output += "))\n"
 
     return output
