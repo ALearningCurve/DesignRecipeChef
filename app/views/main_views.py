@@ -18,6 +18,9 @@ def index():
     should_create_examples = "should_create_examples" in request.form
     should_create_template = "should_create_template" in request.form
 
+    # remove new line characters from the input
+    data_definitions = data_definitions.replace("\n", "").replace("\r", "").strip()
+
     examples = string_to_list(data_definitions, is_csv)
 
     output = create_output(

@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link
-			href="{{ url_for('static', filename='styles.css') }}"
-			rel="stylesheet"
-			type="text/css"
-		/>
-		<link href="{{ url_for('static', filename='favicon/favicon.ico') }}"
-		rel="shortcut icon" >
 
-		<title>{% block title %}{% endblock %}</title>
-	</head>
-	<body>
-		{% block body %} {% endblock %}
-	</body>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ url_for('static', filename='favicon/favicon.ico') }}" rel="shortcut icon">
+
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+    <div style="padding-bottom: 5rem;">
+        {% block body %} {% endblock %}
+    </div>
+</body>
+
 </html>

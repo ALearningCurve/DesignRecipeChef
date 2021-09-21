@@ -56,7 +56,7 @@ def create_examples(example_names: list, example_values: list, name: str) -> str
     """
     output = "\n"
     for i, item in enumerate(example_names):
-        output += f"(define {name.upper()}-{remove_quotes(item).strip()} {example_values[i]})\n"
+        output += f"(define {name.upper()}-{remove_quotes(item).strip().upper()} {example_values[i]})\n"
     return output
         
 def create_data_definitions(example_values: list, name: str) -> str:
