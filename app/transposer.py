@@ -109,7 +109,7 @@ def create_template_simple(datatype_name: str, arg_name: str) -> str:
         str: Simple method stub/template
     """
     output = "\n"
-    output += f"(define ({datatype_name}-template {arg_name})"
+    output += f"(define ({datatype_name.lower()}-template {arg_name})"
     output += f"\n  (... {arg_name} ...))"
 
     return output
