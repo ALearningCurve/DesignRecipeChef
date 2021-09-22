@@ -45,4 +45,6 @@ With input `1::(make-posn 1 1),2::(make-posn 0 0)` produces:
 # Contributing
 If you want to contribute to this project or make suggestions feel free
 
-
+# Running Locally
+After installing flask simple (from the base directory) run `python flask_app.py`.
+To enable debug mode or other configurations edit the `app/local_settings.py` file.
