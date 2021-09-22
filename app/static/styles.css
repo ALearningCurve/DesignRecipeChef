@@ -116,6 +116,19 @@ sub {
     font-size: .8rem;
 }
 
+select {
+    background: white;
+    /* Make it look more like an input*/
+    border: solid gray 1px;
+    border-radius: .1em;
+    padding: 3px 5px;
+}
+
+code {
+    color: var(--theme-300);
+    background-color: var(--theme-800);
+}
+
 
 /* The switch - the box around the slider */
 

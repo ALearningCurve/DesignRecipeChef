@@ -10,15 +10,16 @@
         <label for="name">Date Type Name:</label>
         <input type="text" id="name" name="name" onblur="makeArgName()">
         <br>
-        <label for="arg_name">Arg Name:</label>
+        <label for="arg_name">Template Argument Name:</label>
         <input type="text" id="arg_name" name="arg_name">
         <br>
         <!-- Determine the output to create -->
-        <label for="is_enumerable">
-            <input type="checkbox" id="is_enumerable" name="is_enumerable">
-            <span class="slider"></span>
-            <span class="label">Is an enumerable type? </span>
-        </label><br>
+        <label for="data_type">Select the Data Type</label>
+        <select name="data_type" id="data_type" placeholder="Select a datatype">
+            <option value="1" default>Simple (ie NaturalNumber)</option>
+            <option value="2">Enum</option>
+            <option value="3">Struct</option>
+        </select>
 
         <h3> Output should have:</h3>
         <label for="should_create_data_definitions">
@@ -42,14 +43,22 @@
         <sub>
             <p>
                 Must be formatted as <span style="font-style: italic;">CSV</span> such as <code>"a","b","c"</code> or <code>1,2,3</code>.
-                If you want the example constant name to be different from the value use the <code>name::value</code>
-                format to specify an alternate value for the name of the constant
+                Alternativly can be formmated as a list of <code>; - firstname </code> each on their own line as is common in instructions
+                and design recipe comments.
+            </p>
+            <p>    
+                If you want the example constant name to be different from the value, use the <code>name::value</code>
+                format to specify an alternate value for the name of the constant. This is really mainly useful for creating examples.
             </p>
         </sub>
         <textarea id="data_definitions" style="display: block;">
     
         </textarea>
-
+        <label for="is_csv">
+            <input type="checkbox" id="is_csv" name="is_csv" checked>
+            <span class="slider"></span>
+            <span class="label">Is above a CSV?<span style="color:var(--highlight)">**</span></span>
+        </label><br>
         <br>
     </form>
     <br>
